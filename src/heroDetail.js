@@ -5,17 +5,20 @@ function HeroDetailController($element) {
     var ctrl = this;
 
     ctrl.$onInit = function() {
-        console.log("Hola onInit");
-        console.log($element);
+        console.log("Executing onInit event");
     }
 
+    ctrl.gotFocus = function($event) {
+        $($event.target).select();
+    };
+
     ctrl.$postLink = function() {
-        console.log("Hola postLink");
-        console.log($element);
-        $($element).children(":input").addClass("red-back");
-        $($element).children(":input").css("background-color", "blue");
-        $($element).children(":input").css("color", "red");
-        $($element).children(":input").attr("ng-disabled", "true");
+        console.log("Executing postLink event");
+        var inputBox = $($element).find(":input")
+        inputBox.addClass("onhover-emphasized");
+
+        var label = $($element).find("label");
+        label.addClass("onhover-emphasized");
     }
 }
 

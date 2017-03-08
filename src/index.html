@@ -21,12 +21,12 @@
 <body ng-app="heroApp">
     
     <div class="container">
-      <div ng-controller="MainCtrl as ctrl">
+      <div ng-controller="MainController as vm">
         <h1>Angular JS 1.X components sample</h1>
         <hr />
 
-        <hero-detail hero="ctrl.hero"></hero-detail>
-        
+        <hero-detail hero="vm.hero"></hero-detail>
+
       </div>
     </div>
 

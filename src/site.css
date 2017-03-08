@@ -1,3 +1,11 @@
-.red-back {
-    background-color: red;
+input.onhover-emphasized:hover {
+    border-color: black;
+}
+
+.input-group > .onhover-emphasized {
+    color: slategray;
+}
+
+.input-group > .onhover-emphasized:hover {
+    color: black;
 }

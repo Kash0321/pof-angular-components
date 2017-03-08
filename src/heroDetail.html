@@ -10,9 +10,20 @@
         <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
             <div class="panel-body">
                 <form>
+                    <div ng-if="!$ctrl.hero.canChangeName" class="alert alert-info alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Cerrar"><span aria-hidden="true">&times;</span></button>
+                        <span><strong>Información!</strong> El nombre no es modificable</span>
+                    </div>
                     <div class="input-group">
                         <label for="input001">Nombre del superhéroe</label>
-                        <input id="input001" type="text" ng-model="$ctrl.hero.name" class="form-control" placeholder="Nombre">
+                        <input 
+                            id="input001" 
+                            type="text" 
+                            ng-model="$ctrl.hero.name" 
+                            ng-focus="$ctrl.gotFocus($event)"
+                            ng-disabled="!$ctrl.hero.canChangeName"
+                            class="form-control" 
+                            placeholder="Nombre">
                     </div>
                 </form>
             </div>
