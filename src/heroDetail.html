@@ -1,14 +1,44 @@
-<span>Name: {{$ctrl.hero.name}}</span>
-<br />
-<br />
-<input type="text" ng-model="$ctrl.hero.name"/>
-<br />
-<br />
-<img 
-    id="b64Img"
-    alt="Imagen de prueba en base 64"
-    ng-src="data:image/png;base64,{{$ctrl.hero.b64photo}}" />
-<img 
-    id="binImg"
-    alt="Imagen de prueba en binario"
-    ng-src="data:image/png;base64,{{$ctrl.hero.binphoto}}" />
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">  
+            <h3 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    {{$ctrl.hero.name}}
+                </a>
+            </h3>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+                <form>
+                    <div class="input-group">
+                        <label for="input001">Nombre del superhéroe</label>
+                        <input id="input001" type="text" ng-model="$ctrl.hero.name" class="form-control" placeholder="Nombre">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingTwo"> 
+            <h3 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Imágenes
+                </a>
+            </h3>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+            <div class="panel-body">
+                <div>
+                    <img 
+                        class="img-responsive col-md-6"
+                        alt="Imagen de prueba en base 64 001"
+                        ng-src="data:image/{{$ctrl.hero.photo001Type}};base64,{{$ctrl.hero.photo001}}" />
+                    <img 
+                        class="img-responsive col-md-6"
+                        alt="Imagen de prueba en base 64 002"
+                        ng-src="data:image/{{$ctrl.hero.photo002Type}};base64,{{$ctrl.hero.photo002}}" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

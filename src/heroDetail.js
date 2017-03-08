@@ -14,7 +14,7 @@ function HeroDetailController($element) {
         console.log($element);
         $($element).children(":input").addClass("red-back");
         $($element).children(":input").css("background-color", "blue");
-        $($element).children(":input").css("color", "white");
+        $($element).children(":input").css("color", "red");
         $($element).children(":input").attr("ng-disabled", "true");
     }
 }
