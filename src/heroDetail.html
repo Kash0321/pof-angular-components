@@ -2,3 +2,13 @@
 <br />
 <br />
 <input type="text" ng-model="$ctrl.hero.name"/>
+<br />
+<br />
+<img 
+    id="b64Img"
+    alt="Imagen de prueba en base 64"
+    ng-src="data:image/png;base64,{{$ctrl.hero.b64photo}}" />
+<img 
+    id="binImg"
+    alt="Imagen de prueba en binario"
+    ng-src="data:image/png;base64,{{$ctrl.hero.binphoto}}" />
