@@ -1,11 +1,11 @@
-input.onhover-emphasized:hover {
+.form-group > .input-container > input.onhover-emphasized:hover {
     border-color: black;
 }
 
-.input-group > .onhover-emphasized {
+.form-group > .onhover-emphasized {
     color: slategray;
 }
 
-.input-group > .onhover-emphasized:hover {
+.form-group > .onhover-emphasized:hover {
     color: black;
 }
