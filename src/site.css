@@ -9,3 +9,7 @@
 .form-group > .onhover-emphasized:hover {
     color: black;
 }
+
+.panel-body {
+    padding: 10px;
+}
