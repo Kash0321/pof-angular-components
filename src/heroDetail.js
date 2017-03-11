@@ -31,7 +31,17 @@ function HeroDetailController($element) {
 
                     var dataUrl = e.target.result;
 
-                    alert(dataUrl);
+                    //alert(dataUrl);
+
+                    // data:image/{{$ctrl.hero.img000Type}};base64,{{$ctrl.hero.img000}}
+                    var imageType = dataUrl.slice(dataUrl.indexOf('/') + 1, dataUrl.indexOf(';'));
+                    var imageData = dataUrl.slice(dataUrl.indexOf(',') + 1, dataUrl.length);
+
+                    // angular.copy(imageData, ctrl.hero.img000);
+                    // angular.copy(imageType, ctrl.hero.img000Type);
+
+                    ctrl.hero.img000 = imageData;
+                    ctrl.hero.img000Type = imageType;
 
                     // Render thumbnail.
                     // var span = document.createElement('span');

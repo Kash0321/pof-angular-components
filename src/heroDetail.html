@@ -39,31 +39,18 @@
                 </a>
             </h3>
         </div>
-        <div id="collapseTwo" class="panel-collapse" role="tabpanel" aria-labelledby="headingTwo">
+        <div id="collapseTwo" class="panel-collapse collapsed" role="tabpanel" aria-labelledby="headingTwo">
             <div class="panel-body">
+                <div class="well well-sm col-md-12">
+                    <input 
+                        id="imgLoader" 
+                        type="file" />
+                </div>
                 <div class="row">
                     <img 
-                        class="img-responsive col-md-6"
-                        alt="Imagen de prueba en base 64 001"
-                        ng-src="data:image/{{$ctrl.hero.photo001Type}};base64,{{$ctrl.hero.photo001}}" />
-                    <img 
-                        class="img-responsive col-md-6"
-                        alt="Imagen de prueba en base 64 002"
-                        ng-src="data:image/{{$ctrl.hero.photo002Type}};base64,{{$ctrl.hero.photo002}}" />
-                </div>
-                <div class="row" style="margin-top: 10px">
-                    <div class="col-md-12">
-                        <input 
-                            id="files" 
-                            type="file" />
-                        <button type="button" ng-click="$ctrl.pushImage()" class="btn btn-primary">
-                            Load image
-                        </button>
-                        <img 
-                            class="img-responsive col-md-12"
-                            alt="Imagen de prueba en base 64 000 (loading)"
-                            ng-src="data:image/{{$ctrl.hero.photo000Type}};base64,{{$ctrl.hero.photo000}}" />
-                    </div>
+                        class="img-responsive col-md-12"
+                        alt="Imagen de prueba en base 64"
+                        ng-src="data:image/{{$ctrl.hero.img000Type}};base64,{{$ctrl.hero.img000}}" />
                 </div>
             </div>
         </div>
